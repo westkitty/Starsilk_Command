@@ -17,3 +17,12 @@
 **Publishing status at this entry:** Source prepared. Pages activation must be verified after committing; initial repository Pages settings could not be read or written through the available GitHub connector.
 
 **Future priorities:** Confirm deployed live page; test save/reload/offline in actual origin; adversarial scenario-balance tests; improve environment-specific control maps; optional AI parser only after separate consent and privacy-safe design.
+
+## 2026-10-31 — Pages publication verified
+
+- **Remote source:** `westkitty/Starsilk_Command`, `main` at `bca0f0ecb0dcc779bf6572a89008df12186bba9e` at verification. GitHub remote blobs for game source and tests matched the locally tested files.
+- **CI:** GitHub Actions run `41198217331` successfully completed both the test and publish jobs. Deployment action reported success on 2026-10-31 at 11:46:49 UTC.
+- **Published environment URL:** https://westkitty.github.io/Starsilk_Command/
+- **Validation:** `npm test` independently repeated (14/14 passing); separate local browser navigation to HTTP, file, and data URLs was blocked by administrator policy, so live HTTP, reload/resume, service-worker offline fallback and screen-reader paths remain unverified.
+- **Protected scope:** No gameplay or canon changes were made during publication follow-up. Avoid treating a successful deployment action as proof of every real-browser interaction.
+- **Next:** Real-origin smoke test; saved-run refresh; offline cache re-entry; bounded scenario playtests.
