@@ -4,6 +4,8 @@
 **Prepared:** 2026-10-31.  
 **Target repository:** https://github.com/westkitty/Starsilk_Command  
 **Live site reported by GitHub Pages:** https://westkitty.github.io/Starsilk_Command/  
+**Authoritative public Starsilk Character Dossier source repository:** https://github.com/westkitty/Starsilk_Character_Dossier  
+**Published Character Dossier / Starsilk Compendium (GitHub Pages):** https://westkitty.github.io/Starsilk_Character_Dossier/  
 **Status:** Project handoff documentation. **Not** a new feature, canon amendment, test report, or authorization for implementation.  
 **Public boundary:** This Markdown is committed to a PUBLIC GitHub repository. It deliberately summarizes relevant lore rather than rehosting private source documents, credentials, personal information, or unapproved media.
 
@@ -32,11 +34,19 @@ You are inheriting **Starsilk Command**, an existing, playable, browser-first, d
 
 - **Command/game repository:** westkitty/Starsilk_Command. Its authoritative editable code and game-local state are here, not in the Dossier repository.
 - **Command/game publication:** GitHub Pages at https://westkitty.github.io/Starsilk_Command/ . The current Pages release must always be checked against a concrete GitHub Actions deployment run and branch SHA.
-- **Separate public character/canon dossier:** https://github.com/westkitty/Starsilk_Character_Dossier . This is a **source reference**, not the target repository for this game. Do not edit, stage, push, or deploy it unless the owner independently authorizes those actions.
+- **Separate public Character Dossier canon repository:** https://github.com/westkitty/Starsilk_Character_Dossier . **Public Pages / browsable Starsilk Compendium:** https://westkitty.github.io/Starsilk_Character_Dossier/ . The Dossier's own README confirms Pages is served from `main` / `docs`. Use the published site for navigation and context, but the authored sections in the repository for source-level lore authority. This is a **read-only source reference**, not the target repository for this game. Do not edit, stage, push, or deploy it unless the owner independently authorizes those actions.
 - **Underlying project type:** Stinky Weasel Productions / Starsilk; independent fictional universe and proprietary creative IP. Public source availability does not equal an open-content license.
 - **Existing runtime:** static HTML, CSS, browser JavaScript ES modules; Node 22+ only for the local dev/test workflow. No server application, API key, live model, backend, required dependency, external CDN, or paid service is part of the current playable game.
 - **Operational identity:** GitHub repository and branch must be established from live evidence each session. The last verified head *before the current documentation update* was 329fc0d6953dea23898ce6508f22cd63b70b532d on main (2026-10-31). This is historical evidence, not a permanently current SHA.
 - **Public content boundary:** Never paste private Drive documents wholesale into this public repository, expose unpublished source art, copy credentials, infer permission to relicense the author's creative IP, or publish privacy-sensitive account data. Summarize only relevant verified canon and identify public authority paths.
+
+**Standalone Dossier locator (no previous project access required):**
+- Public browse/read link: https://westkitty.github.io/Starsilk_Character_Dossier/
+- Public editable-source reference (read-only for this game): https://github.com/westkitty/Starsilk_Character_Dossier
+- Authored lore section directory: https://github.com/westkitty/Starsilk_Character_Dossier/tree/main/src/content/sections
+- Canon authority contract: https://github.com/westkitty/Starsilk_Character_Dossier/blob/main/src/canon/AUTHORITY.md
+- Registered subset of machine-enforced canon locks: https://github.com/westkitty/Starsilk_Character_Dossier/blob/main/src/canon/invariants.json
+- If the website and authored repository disagree, inspect authorship/generation timestamps; the Dossier documents its `docs` Pages output as generated from `src/content`. Do not treat a generated page or a partial machine-lock registry as stronger authority than authored source.
 
 **Governing order for work:** latest explicit user instruction > Starsilk Command project-local OPERATIONAL_STATE.md and explicit accepted decisions > this handoff's protected requirements > current public Dossier authored canon for lore facts > its machine-enforced canon locks (the registered subset only) > source-grounded game specifications > verified current code/test/deployment evidence > inferred recommendations. If two governing sources actually conflict, surface it; do not silently average.
 
@@ -394,7 +404,7 @@ Read and apply the entire PROJECT_HANDOFF_PROMPT.md. Inspect the current reposit
 
 The game is set **during and after the 170-year Blood Eclipse War, strictly before Starbinding**. Preserve irrevocable canonical events and the finality of death. The **Shard-God is the only permitted individually named established canon character**, and game-facing language must use only "the Shard-God". All other personnel are new and original. Starsilk is executable material, Drakken are planetary terraformers, Blood Rings are atrocity-structures, and the Siege Wall's real exterior is a starless absence.
 
-Use the current public authored Character Dossier as the lore source of truth where necessary; its separate museum repository is **read-only for this task**. Keep nonpublic source/credentials out of the public game repository. No live AI requests or additional spending without new approval.
+Use the current public [Character Dossier / Starsilk Compendium](https://westkitty.github.io/Starsilk_Character_Dossier/) for navigation, and its [GitHub source repository](https://github.com/westkitty/Starsilk_Character_Dossier) for source-authoritative lore; the separate Dossier repository is **read-only for this task**. Keep nonpublic source/credentials out of the public game repository. No live AI requests or additional spending without new approval.
 
 When the user gives a new task, translate it into a bounded implementation or documentation contract; verify scope and requirements; change only authorized files; validate; and provide a concise, evidence-backed report with exact changed files, actual test outcomes and Git/deployment status. Do not claim that future ideas are shipped. Stop on wrong-project identity or missing authority, not on mere lack of prior-chat memory.
 

@@ -1,7 +1,7 @@
 # Operational State — Starsilk Command
 
 Project ID: `westkitty/Starsilk_Command`
-Status revision: 3
+Status revision: 4
 Evidence date: 2026-10-31
 Current task: document the future immersive bridge and deliver a self-contained game/canon successor-project handoff; NO bridge gameplay implementation. Live-origin browser verification and playtesting remain.
 
@@ -59,3 +59,9 @@ Current task: document the future immersive bridge and deliver a self-contained 
 - **Documentation delivery is public GitHub source**, not a request to copy private Drive originals. The GitHub Pages workflow excludes Markdown from the published site payload.
 - This documentation-only change should preserve npm tests and existing Pages output bytes. Remote commit/deployment evidence must be recorded after pushing; do not infer it in advance.
 - Future: evaluate Phase 1 manual 3D seated view only after explicit user authorization, then independent webcam/privacy proof, then living-bridge integration. Real-origin save/offline/mobile checks still outstanding.
+
+## 2026-10-31 — cross-project canon discovery links
+
+- The creator explicitly required the separate successor-project handoff to include **both** the public Character Dossier repository `https://github.com/westkitty/Starsilk_Character_Dossier` and its published GitHub Pages Compendium `https://westkitty.github.io/Starsilk_Character_Dossier/`.
+- Verified the Dossier's own README identifies this Pages URL and reports the site is served from `main` / `docs`. Handoff now supplies direct source-section and canon-invariant links and maintains the `src/content` authored-source precedence over derived Pages output.
+- Boundaries unchanged: `Starsilk_Command` is the sole write target; the Character Dossier is read-only; these changes are documentation only and do **not** implement immersive bridge, fullscreen, camera tracking or new gameplay.

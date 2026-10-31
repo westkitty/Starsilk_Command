@@ -41,3 +41,7 @@
 **Validation/delivery:** Docs-only changes should preserve 14 existing Node tests; publication status and exact SHA require readback after the commit. Future successor must re-verify current repository state, not inherit this as current forever.
 
 **Next work:** User-directed build approval for prototype or continue game balance/real-browser QA. Do not silently start the webcam/3D project from a documentation entry.
+
+## 2026-10-31 — successor canon locator amendment
+
+User-required cross-project handoff locator: include **both** Character Dossier GitHub source (`https://github.com/westkitty/Starsilk_Character_Dossier`) and browsable Compendium Pages (`https://westkitty.github.io/Starsilk_Character_Dossier/`). The Dossier README states its Pages deploy from `main` / `docs`. In the successor handoff, make the correct authority distinction: authored `src/content/sections/*.body.html` and `*.title.html` are lore authority; generated Pages are browsable derivatives; `src/canon/invariants.json` contains selected machine locks, not the whole canon. The Dossier is never this game's write target. This amendment modifies documentation only; the seated immersive bridge remains **NOT IMPLEMENTED**.

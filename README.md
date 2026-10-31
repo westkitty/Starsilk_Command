@@ -4,7 +4,7 @@ A browser-first, offline-capable crisis-command game spanning the Blood Eclipse 
 
 ## Successor-project handoff
 
-- [PROJECT_HANDOFF_PROMPT.md](PROJECT_HANDOFF_PROMPT.md) — the self-contained project-specific context, lore restrictions, implemented game inventory, source pointers and continuation instructions for moving to another ChatGPT Project.
+- [PROJECT_HANDOFF_PROMPT.md](PROJECT_HANDOFF_PROMPT.md) — the self-contained project-specific context, lore restrictions, implemented game inventory, source pointers and continuation instructions for moving to another ChatGPT Project. It includes both the [Character Dossier source repository](https://github.com/westkitty/Starsilk_Character_Dossier) and the [public Starsilk Compendium (GitHub Pages)](https://westkitty.github.io/Starsilk_Character_Dossier/), with source-of-truth rules.
 - [docs/PROPOSED_IMMERSIVE_BRIDGE.md](docs/PROPOSED_IMMERSIVE_BRIDGE.md) — **PROPOSAL ONLY / NOT IMPLEMENTED**: optional seated-center bridge view, fullscreen, on-device webcam head-pose tracking, fallback controls and validation gates.
 
 **As shipped:** Starsilk Command is still a **2D tactical command interface**. The repository currently contains **no 3D bridge, head/eye tracking, fullscreen bridge control or webcam integration**. These are future design proposals, not features you can activate in the game.
