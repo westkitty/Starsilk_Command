@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c151a">
+  <meta name="description" content="Command a vessel through the Blood Eclipse War and its aftermath. Every order alters a real simulation.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Starsilk Command — Incident Operations</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to operations</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-head">
+    <div class="identity"><div class="insignia" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div><p class="overline">ADMINISTRATION / INCIDENT OPERATIONS</p><strong>STARSILK<span class="dim-title"> / COMMAND</span></strong></div>
+    </div>
+    <div class="head-right"><span class="health-light" aria-hidden="true"></span><span>LOCAL SIMULATION</span><span class="header-index">ARCHIVE / 01</span></div>
+  </header>
+  <main id="main">
+    <section id="lobby" class="lobby" aria-labelledby="lobby-heading">
+      <div class="lobby-visual">
+        <div class="orbital-orbit orbit-one"></div><div class="orbital-orbit orbit-two"></div><div class="orbital-orbit orbit-three"></div>
+        <div class="planet-art" aria-hidden="true"><div class="planet-light"></div><div class="planet-shadow"></div></div>
+        <div class="signal-flare flare-one"></div><div class="signal-flare flare-two"></div>
+        <div class="lobby-coordinate left">SECTOR TELEMETRY<br>CONNECTION / DEGRADED</div><div class="lobby-coordinate right">NO DISTRESS PRIORITY<br>ASSIGNED</div>
+      </div>
+      <div class="lobby-heading-block"><p class="overline accent">SECTOR OPERATIONS / HISTORICAL SIMULATION</p>
+        <h1 id="lobby-heading">The world does not<br><em>wait for orders.</em></h1>
+        <p class="lobby-intro">A crisis command simulation set during the Blood Eclipse War and its aftermath. Command failing systems, incomplete information and ordinary people. History is fixed. What happens on your watch is not.</p>
+      </div>
+      <div class="lobby-bottom">
+        <form id="launch-form" class="launch-form">
+          <div class="section-kicker"><span>01</span> SELECT AN INCIDENT</div>
+          <label for="era-select">HISTORICAL WINDOW</label>
+          <select id="era-select" name="era"><option value="ALL">All permitted eras</option><option value="WARTIME">Blood Eclipse War</option><option value="POSTWAR">After the war</option></select>
+          <label for="scenario-select">INCIDENT TYPE</label><select id="scenario-select" name="scenario"></select>
+          <label for="seed-input">REPLAY SEED <span class="muted">(OPTIONAL)</span></label><input id="seed-input" name="seed" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="10" placeholder="Random on launch">
+          <button type="submit" class="primary wide" id="begin-btn"><span>BEGIN INCIDENT</span><span aria-hidden="true">↗</span></button>
+          <button type="button" class="secondary wide" id="resume-btn" hidden>RESUME LAST INCIDENT</button>
+        </form>
+        <div class="lobby-manual"><div class="section-kicker"><span>02</span> OPERATOR BRIEF</div>
+          <p>Issue up to two orders per cycle. Advance time when ready. Crew carry out assignments while the environment changes independently.</p>
+          <div class="manual-row"><span>01 / OBSERVE</span><span>Interrogate unreliable readings.</span></div>
+          <div class="manual-row"><span>02 / COMMAND</span><span>Repair, rescue, document, reroute.</span></div>
+          <div class="manual-row"><span>03 / ACCOUNT</span><span>Consequences are irreversible.</span></div>
+          <p class="manual-note">No live model, account, network call or subscription required to play. Local autosave and repeatable seeds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="game" aria-label="Active incident" hidden>
+      <div class="game-banner"><div><p class="overline accent" id="scenario-era">WARTIME / OPERATIONS</p><h1 id="scenario-title">INCIDENT</h1><p class="scenario-place" id="scenario-place"></p></div>
+        <div class="banner-actions"><button type="button" class="text-button" id="return-btn">← ARCHIVE</button><button type="button" class="text-button" id="export-btn">EXPORT REPORT ↗</button></div>
+      </div>
+      <div class="status-band" aria-label="Simulation status">
+        <div><span class="stat-label">ELAPSED</span><strong id="elapsed" class="stat-big">00:00</strong></div>
+        <div><span class="stat-label">ORDERS AVAILABLE</span><strong id="orders" class="stat-big">02</strong></div>
+        <div><span class="stat-label">BREATHABLE RESERVE</span><strong id="air" class="stat-big">—</strong></div>
+        <div><span class="stat-label">THERMAL LOAD</span><strong id="thermal" class="stat-big">—</strong></div>
+        <div class="status-seed"><span class="stat-label">INCIDENT SEED</span><strong id="display-seed" class="stat-big">—</strong></div>
+      </div>
+      <div class="game-grid">
+        <section class="environment-panel panel" aria-labelledby="environment-title">
+          <div class="panel-head"><span class="section-kicker"><span>01</span> TACTICAL VIEW</span><span class="tag" id="world-tag">OBSERVED</span></div>
+          <h2 id="environment-title">THE OPERATIONAL AREA</h2>
+          <div id="world-view" class="world-view" data-map="ring" aria-label="Abstract incident environmental schematic">
+            <svg viewBox="0 0 700 360" role="img" aria-labelledby="world-svg-title world-svg-desc">
+              <title id="world-svg-title">Environmental schematic</title>
+              <desc id="world-svg-desc">A navigational representation of a planet, vessel, containment arcs and telemetry. The gauges below give exact state values.</desc>
+              <defs><radialGradient id="orbGlow"><stop offset="0" stop-color="#23505a"/><stop offset=".52" stop-color="#16333d"/><stop offset="1" stop-color="#0b181e"/></radialGradient><linearGradient id="bandGrad" x1="0" x2="1"><stop offset="0" stop-color="#451e2b"/><stop offset=".5" stop-color="#c37078"/><stop offset="1" stop-color="#552330"/></linearGradient></defs>
+              <g class="scene-grid"><path d="M0 60H700 M0 120H700 M0 180H700 M0 240H700 M0 300H700 M70 0V360 M140 0V360 M210 0V360 M280 0V360 M350 0V360 M420 0V360 M490 0V360 M560 0V360 M630 0V360"/></g>
+              <circle cx="350" cy="180" r="132" fill="url(#orbGlow)" stroke="#42616a" stroke-width="1"/><path d="M245 101 Q345 85 433 130 M232 219 Q340 164 448 220 M274 287 Q345 225 451 253" fill="none" stroke="#496c76" opacity=".25" stroke-width="6"/>
+              <g class="rings" stroke="url(#bandGrad)" fill="none" stroke-linecap="round"><ellipse cx="350" cy="180" rx="213" ry="63" stroke-width="13" transform="rotate(-22 350 180)" stroke-dasharray="185 37 76 16"/><ellipse cx="350" cy="180" rx="220" ry="67" stroke-width="2" transform="rotate(-22 350 180)" opacity=".7"/></g>
+              <g class="trajectory" fill="none" stroke="#c3d3c5" stroke-width="1.5" stroke-dasharray="4 6"><path d="M58 275 Q188 211 273 213 Q437 213 623 88"/></g>
+              <g class="vessel-marker" transform="translate(260 222)"><path d="M0 -14L8 7L0 3L-8 7Z" fill="#e4c68d" stroke="#f6e4c6"/><circle r="19" fill="none" stroke="#d6aa62" stroke-dasharray="2 4"/></g>
+              <text x="33" y="33" class="map-caption">TELEMETRY / LOCAL</text><text x="520" y="335" class="map-caption">FIELD ESTIMATE</text>
+            </svg>
+            <div class="world-footer"><span id="map-left">PERIMETER / ACTIVE</span><span id="map-right">RISK MODEL / LIVE</span></div>
+          </div>
+          <div class="environment-body"><div class="hazard-heading"><span id="hazard-name">THREAT</span><strong id="hazard-value">00%</strong></div><div class="meter hazard-meter"><span id="hazard-fill"></span></div>
+            <p id="scenario-brief" class="environment-brief"></p><div class="objective-box"><p class="overline">PRIMARY OBJECTIVE</p><p id="scenario-objective"></p><div class="objective-data"><strong id="objective-count">0 / 0</strong><span id="objective-label">RECOVERED</span></div></div>
+            <div class="telemetry"><span class="overline">CURRENT SIGNALS</span><div id="signals"></div></div>
+          </div>
+        </section>
+        <section class="systems-panel panel" aria-labelledby="systems-heading"><div class="panel-head"><span class="section-kicker"><span>02</span> SUBSYSTEMS</span><span class="tag">PHYSICAL STATE</span></div><h2 id="systems-heading">SHIP INTEGRITY</h2><div id="systems" class="system-list"></div>
+          <div class="stores"><p class="overline">AVAILABLE RESERVES</p><div id="stores-values" class="stores-grid"></div><p class="power-readout" id="power-readout"></p></div>
+        </section>
+        <section class="crew-panel panel" aria-labelledby="crew-heading"><div class="panel-head"><span class="section-kicker"><span>03</span> DUTY ROSTER</span><span class="tag" id="crew-count">5 ACTIVE</span></div><h2 id="crew-heading">CREW / ASSIGNMENTS</h2><div id="crew-list"></div><p class="muted crew-footnote">Assignments progress when the clock advances. No member can perform two tasks simultaneously.</p></section>
+        <section class="command-panel panel" aria-labelledby="command-heading"><div class="panel-head"><span class="section-kicker"><span>04</span> COMMAND DECK</span><span class="tag">DETERMINISTIC</span></div><h2 id="command-heading">ISSUE AN ORDER</h2><p class="muted command-hint">Natural phrases are interpreted locally. Orders must reference available procedures. The simulation resolves effects, not the wording.</p>
+          <form id="command-form" class="command-form"><label for="command-input">DIRECTIVE / ONE ACTION AT A TIME</label><div class="command-entry"><input id="command-input" type="text" autocomplete="off" maxlength="180" placeholder="e.g. repair cooling" aria-describedby="command-help"><button class="primary" type="submit" id="send-order">ISSUE ↗</button></div><p id="command-help" class="muted">Try: repair hull · scan · rescue · stabilize · transmit · prioritize cooling · withdraw</p></form>
+          <div id="command-feedback" class="feedback" role="status" aria-live="polite">Awaiting directive.</div><div id="quick-orders" class="quick-orders" aria-label="Available quick orders"></div>
+          <button type="button" id="advance-btn" class="advance"><span><strong>ADVANCE ONE CYCLE</strong><small>30 simulated seconds · active tasks resolve</small></span><span aria-hidden="true">→</span></button>
+        </section>
+        <section class="events-panel panel" aria-labelledby="events-heading"><div class="panel-head"><span class="section-kicker"><span>05</span> RECORD</span><span class="tag">IMMUTABLE EVENTS</span></div><h2 id="events-heading">THE RUNNING ACCOUNT</h2><ol id="event-log" class="event-log" aria-label="Incident event log"></ol></section>
+      </div>
+      <section id="report-panel" class="report-panel panel" aria-labelledby="report-heading" hidden><span class="section-kicker"><span>06</span> AFTER ACTION</span><h2 id="report-heading">WHAT REMAINS</h2><p class="muted">The record reports what was observed and what the engine resolved. Unknown actions are not invented.</p><div id="report-stats" class="report-stats"></div><p id="report-conclusion"></p><div class="report-actions"><button type="button" class="primary" id="replay-btn">REPLAY THIS SEED ↗</button><button type="button" class="secondary" id="next-btn">NEW RANDOM INCIDENT</button></div></section>
+    </section>
+  </main>
+  <footer class="site-foot"><span>INCIDENT OPERATIONS / LOCAL RECORD</span><span>EVENTS MAY BE UNRECOVERABLE. THEIR RECORDS SHOULD NOT BE.</span></footer>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
