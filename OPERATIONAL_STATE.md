@@ -1,9 +1,9 @@
 # Operational State — Starsilk Command
 
 Project ID: `westkitty/Starsilk_Command`
-Status revision: 2
+Status revision: 3
 Evidence date: 2026-10-31
-Current task: initial game published to GitHub Pages; live-origin browser verification and playtesting remain.
+Current task: document the future immersive bridge and deliver a self-contained game/canon successor-project handoff; NO bridge gameplay implementation. Live-origin browser verification and playtesting remain.
 
 ## Binding and authority
 
@@ -49,3 +49,13 @@ Current task: initial game published to GitHub Pages; live-origin browser verifi
 2. Refresh, resume a saved incident, and test offline fallback after first successful online load.
 3. Conduct a bounded balance playtest for each scenario family and expand event-causality tests.
 4. Preserve the user-locked historical, character-naming, and API-privacy boundaries.
+
+## 2026-10-31 — handoff and immersive bridge proposal (documentation only)
+
+- The creator asked to preserve a complete new-project handoff and the proposed fullscreen, seated fixed-view bridge/head-pose concept in the public Starsilk Command source repository.
+- Added PROJECT_HANDOFF_PROMPT.md: standalone successor AI/project instructions, current implementation inventory, source priorities, game-relevant Dossier canon, 170-year war, explicit roster/naming/era exclusions, API privacy/cost constraints, and uncertainty boundaries. Canon synthesis is not a new editable canon authority.
+- Added docs/PROPOSED_IMMERSIVE_BRIDGE.md: proposed Fullscreen API, fixed commander chair viewpoint, optional local webcam head-pose (not precise gaze), candidate Three.js/MediaPipe components, consent/calibration/manual fallback, privacy, accessibility, performance and staged future QA.
+- **NOT IMPLEMENTED:** no source code, runtime dependency, camera access, WebGL bridge, tracking model, 3D cockpit, fullscreen control, scene asset or game save schema change was made. Current product remains the working 2D tactical UI with the existing nine scenarios and deterministic engine.
+- **Documentation delivery is public GitHub source**, not a request to copy private Drive originals. The GitHub Pages workflow excludes Markdown from the published site payload.
+- This documentation-only change should preserve npm tests and existing Pages output bytes. Remote commit/deployment evidence must be recorded after pushing; do not infer it in advance.
+- Future: evaluate Phase 1 manual 3D seated view only after explicit user authorization, then independent webcam/privacy proof, then living-bridge integration. Real-origin save/offline/mobile checks still outstanding.

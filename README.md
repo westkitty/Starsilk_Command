@@ -2,6 +2,13 @@
 
 A browser-first, offline-capable crisis-command game spanning the Blood Eclipse War and its aftermath. The game is a deterministic simulation, not an endless conversation. Scenarios vary by seeded crew, damage, resource state, risk and the player's decisions.
 
+## Successor-project handoff
+
+- [PROJECT_HANDOFF_PROMPT.md](PROJECT_HANDOFF_PROMPT.md) — the self-contained project-specific context, lore restrictions, implemented game inventory, source pointers and continuation instructions for moving to another ChatGPT Project.
+- [docs/PROPOSED_IMMERSIVE_BRIDGE.md](docs/PROPOSED_IMMERSIVE_BRIDGE.md) — **PROPOSAL ONLY / NOT IMPLEMENTED**: optional seated-center bridge view, fullscreen, on-device webcam head-pose tracking, fallback controls and validation gates.
+
+**As shipped:** Starsilk Command is still a **2D tactical command interface**. The repository currently contains **no 3D bridge, head/eye tracking, fullscreen bridge control or webcam integration**. These are future design proposals, not features you can activate in the game.
+
 ## Play
 
 **Published game:** https://westkitty.github.io/Starsilk_Command/ — GitHub Actions reported successful Pages deployment on October 31, 2026 (run `41198217331`). Public-origin browser smoke testing remains an independent follow-up.

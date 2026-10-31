@@ -26,3 +26,18 @@
 - **Validation:** `npm test` independently repeated (14/14 passing); separate local browser navigation to HTTP, file, and data URLs was blocked by administrator policy, so live HTTP, reload/resume, service-worker offline fallback and screen-reader paths remain unverified.
 - **Protected scope:** No gameplay or canon changes were made during publication follow-up. Avoid treating a successful deployment action as proof of every real-browser interaction.
 - **Next:** Real-origin smoke test; saved-run refresh; offline cache re-entry; bounded scenario playtests.
+
+
+## 2026-10-31 — Successor-project handoff and proposed bridge design
+
+**Authority:** Explicit owner request to record and commit ideas, not build new bridge features.
+
+**Documentation:** New PROJECT_HANDOFF_PROMPT.md is a portable game-context/canon prompt for a fresh ChatGPT Project without the old Starsilk Character Dossier context. New docs/PROPOSED_IMMERSIVE_BRIDGE.md records the fullscreen/fixed-seat commander's perspective and opt-in on-device head-pose tracking concept, candidate technology, fallback behavior, phases and proof requirements. README links both; OPERATIONAL_STATE.md records the distinction.
+
+**Canon sources:** Current public authored Starsilk Character Dossier lore and machine invariants; relevant Drakken/Blood Ring sources; October 22, 2026 creator-confirmed delta; original Command brief and follow-up corrections. Source facts are summarized and marked; no broad private Drive originals, secret keys or unpublished media are copied to this public Git repository. The Dossier is a source, not this game's workspace or update target.
+
+**Feature evidence:** **Not implemented**. No changes authorized or performed to the game engine, UI logic, camera capture, fullscreen control, renderer, save schema, tests or Pages workflow. The existing 2D game is the only shipped interface.
+
+**Validation/delivery:** Docs-only changes should preserve 14 existing Node tests; publication status and exact SHA require readback after the commit. Future successor must re-verify current repository state, not inherit this as current forever.
+
+**Next work:** User-directed build approval for prototype or continue game balance/real-browser QA. Do not silently start the webcam/3D project from a documentation entry.
