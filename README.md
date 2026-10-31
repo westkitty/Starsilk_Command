@@ -4,7 +4,7 @@ A browser-first, offline-capable crisis-command game spanning the Blood Eclipse 
 
 ## Play
 
-After the repository's Pages publishing source is enabled, the intended address is `https://westkitty.github.io/Starsilk_Command/`. A URL is not proof that a deployment is active; check the Pages deployment status before sharing it as live.
+**Published game:** https://westkitty.github.io/Starsilk_Command/ — GitHub Actions reported successful Pages deployment on October 31, 2026 (run `41198217331`). Public-origin browser smoke testing remains an independent follow-up.
 
 For local development (Node.js 22 or newer):
 
@@ -68,4 +68,4 @@ Engine tests cover seeded reproducibility, era boundaries, refused orders, comma
 
 ### GitHub Pages setup
 
-The workflow publishes only the application files, not repository docs, tests, hidden metadata or raw canon sources. To activate a newly created repository's Pages deployment, an administrator may need to open **Settings → Pages → Build and deployment → Source: GitHub Actions**. The workflow then deploys on pushes to `main` or manual execution, provided repository policies permit Pages and Actions. Do not assume this step has already occurred without checking GitHub's deployment state.
+The workflow publishes only the application files, not repository docs, tests, hidden metadata or raw canon sources. The repository's GitHub Actions Pages deployment was verified successful on October 31, 2026. The workflow automatically tests and publishes on pushes to `main` or manual execution. After future pushes, confirm the corresponding run succeeded before claiming that revision is live.
