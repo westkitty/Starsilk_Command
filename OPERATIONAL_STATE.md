@@ -1,9 +1,9 @@
 # Operational State — Starsilk Command
 
 Project ID: `westkitty/Starsilk_Command`
-Status revision: 1
+Status revision: 2
 Evidence date: 2026-10-31
-Current task: first playable, deterministic browser game; initial GitHub commit and GitHub Pages delivery requested.
+Current task: initial game published to GitHub Pages; live-origin browser verification and playtesting remain.
 
 ## Binding and authority
 
@@ -29,17 +29,23 @@ Current task: first playable, deterministic browser game; initial GitHub commit 
 - Chromium test viewports: 1440px and 390px; no horizontal overflow observed.
 - HTTP server: `curl -I http://localhost:4173/` returned HTTP 200.
 
+## Verified remotely
+
+- GitHub `main` revision `bca0f0ecb0dcc779bf6572a89008df12186bba9e` was inspected directly.
+- GitHub Actions run `41198217331` completed successfully on 2026-10-31: `test` job passed, and `publish` deployed its Pages artifact; deployment log recorded `Reported success!` at 11:46:49 UTC.
+- Pages environment URL recorded by deployment: `https://westkitty.github.io/Starsilk_Command/`.
+- Remote source blob hashes for `index.html`, `styles.css`, `src/main.js`, `src/engine.js`, `src/scenarios.js`, `tests/engine.test.mjs`, and the Pages workflow matched the locally tested content.
+- `npm test` was repeated locally in the follow-up and again passed 14/14.
+
 ## Unverified or blocked
 
-- Direct Chromium navigation to the local HTTP server is blocked by the browser environment (`ERR_BLOCKED_BY_ADMINISTRATOR`), so reload/autosave, service-worker activation and full served module interaction are not verified in that browser.
-- Actual remote Pages activation and successful GitHub Actions deployment require GitHub-side evidence after push.
+- Direct browser navigation (including `http://127.0.0.1:4173/` and `file://`) was blocked by the test environment (`ERR_BLOCKED_BY_ADMINISTRATOR`); this does not negate the GitHub deployment result. Public HTTP delivery, reload/autosave, service-worker activation and full served module interaction remain untested from a real browser origin.
 - Accessibility beyond semantics, responsive visible states, and ordinary button interaction has not been independently audited with a screen reader.
 - Game content, crew rules and equipment are provisional for Starsilk canon, not promoted.
 
 ## Next verification
 
-1. Ensure source on `main` matches locally tested content and capture remote commit SHA.
-2. Inspect GitHub Actions run and Pages status after push.
-3. If Pages remains disabled, enable **GitHub Actions** as the Pages source in repository settings, then rerun/check deployment.
-4. Verify actual public URL and reload/resume/offline fallback in a supported full browser.
-5. Run a bounded balance playtest for each scenario family and expand test coverage for event causality.
+1. Open the published URL in a supported browser and verify resource loading, launch, one action, cycle advancement and report export.
+2. Refresh, resume a saved incident, and test offline fallback after first successful online load.
+3. Conduct a bounded balance playtest for each scenario family and expand event-causality tests.
+4. Preserve the user-locked historical, character-naming, and API-privacy boundaries.
